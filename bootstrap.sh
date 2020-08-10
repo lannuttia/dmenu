@@ -86,14 +86,14 @@ packages() {
     kali)
       case $VERSION_ID in
         *)
-          echo -n ' make gcc libx11-dev pkgconf libxft-dev'
+          echo -n ' make gcc libx11-dev pkgconf libxft-dev libxinerama-dev'
         ;;
       esac
     ;;
     ubuntu)
       case $VERSION_ID in
         20.04)
-          echo -n ' make gcc libx11-dev pkgconf libxft-dev'
+          echo -n ' make gcc libx11-dev pkgconf libxft-dev libxinerama-dev'
         ;;
         *)
           error "Unsupported version of $NAME: $VERSION_ID"
@@ -104,7 +104,7 @@ packages() {
     debian)
       case $VERSION_ID in
         10)
-          echo -n ' make gcc libx11-dev pkgconf libxft-dev'
+          echo -n ' make gcc libx11-dev pkgconf libxft-dev libxinerama-dev'
         ;;
         *)
           error "Unsupported version of $NAME: $VERSION_ID"
@@ -112,7 +112,7 @@ packages() {
       esac
     ;;
     arch|artix)
-      echo -n ' make gcc pkgconf libxft'
+      echo -n ' make gcc pkgconf libx11 libxft libxinerama'
     ;;
     *)
       error "Unsupported OS: $NAME"
